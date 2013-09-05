@@ -1,4 +1,3 @@
-mdeditor
+mdmaker
 ========
-
-a markdown editer
+a simple markdown editer
