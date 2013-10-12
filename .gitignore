@@ -1,0 +1,9 @@
+.git
+.DS_Store
+*.log
+/bin
+/logs
+/node_modules
+/tmp
+/web/src/bower-libs
+/web/src-min
