@@ -6,4 +6,4 @@
 /node_modules
 /tmp
 /web/src/bower-libs
-/web/src-min
+/web/src-build

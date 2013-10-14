@@ -1,0 +1,16 @@
+CACHE MANIFEST
+#Date 
+
+CACHE:
+#index.html
+lib/MathJax/MathJax.js?config=TeX-AMS_HTML
+lib/MathJax/config/Safe.js
+lib/MathJax/config/TeX-AMS_HTML.js
+lib/MathJax/images/CloseX-31.png
+lib/MathJax/images/MenuArrow-15.png
+lib/MathJax/jax/output/HTML-CSS/jax.js
+
+NETWORK:
+*
+
+#remove cache: chrome://appcache-internals/

@@ -6,13 +6,15 @@
         "jquery": "2.0.3",
         "underscore": "1.5.1",
         "requirejs": "~2.1.8",
+        "requirejs-text": "~2.0.10",
         "require-css": "~0.0.7",
         "require-stylus": "~1.0.8",
         "mousetrap": "~1.4.4",
-        "jgrowl": "~1.2.10",
+        "google-code-prettify": "~1.0.0",
         "highlightjs": "~7.3.0",
         "FileSaver": "*",
-        "requirejs-text": "~2.0.10",
-        "ace": "#51b7cb67a63998c9c0b7d089a85c60e032a7cc17"
+        "stacktrace": "~0.5.3",
+        "ace": "#51b7cb67a63998c9c0b7d089a85c60e032a7cc17",
+        "marked": "~0.2.9"
     }
 }
