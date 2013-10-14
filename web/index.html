@@ -12,12 +12,12 @@
     <!-- <iframe style="display: none;" src="cache.html"></iframe> -->
 <script>
 var baseDir = 'assets';
-if(location.search.match(/debug/)) baseDir = 'res';
+if(!location.search.match(/debug/)) baseDir = 'src';
 var require = {
     baseUrl: baseDir,
     deps: ['js/main']
 };
 </script>
-<script src="lib/require/require.min.js"></script>
+<script src="lib/require/require.js"></script>
 </body>
 </html>

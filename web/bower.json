@@ -15,6 +15,7 @@
         "FileSaver": "*",
         "stacktrace": "~0.5.3",
         "ace": "#51b7cb67a63998c9c0b7d089a85c60e032a7cc17",
-        "marked": "~0.2.9"
+        "marked": "~0.2.9",
+        "font-awesome": "3.2.1"
     }
 }

@@ -30,8 +30,8 @@ requirejs.config({
 		, highlightjs: 'bower-components/highlightjs/highlight.pack'
 		, FileSaver: 'bower-components/FileSaver/FileSaver'
 		, stacktrace: 'bower-components/stacktrace/stacktrace'
-		, jqueryUI: 'libs/jquery-ui/js/jquery-ui-1.10.3.custom'
-		, jqueryLayout: 'libs/jquery-layout/jquery.layout-latest.min'
+		, jqueryUI: 'lib/jquery-ui/js/jquery-ui-1.10.3.custom'
+		, jqueryLayout: 'lib/jquery-layout/jquery.layout-latest.min'
 	}
 	, shim: {
 		underscore: {
@@ -40,8 +40,18 @@ requirejs.config({
 		, mousetrap: {
 			exports: 'mousetrap'
 		}
-		, mathjax: ['mathjax-init']
+		, mathjax: ['js/mathjax-init']
 		, jqueryLayout: ['jqueryUI']
 		, jqueryUI: ['jquery']
 	}
+});
+
+// Application main
+define([
+	'jquery'
+	, 'stylus!style/layout'
+	, 'stylus!style/themes/theme-default'
+	, 'js/layout'
+], function($) {
+	console.log($);
 });
