@@ -5,5 +5,5 @@
 /logs
 /node_modules
 /tmp
-/web/src/bower-libs
+/web/src/bower-components
 /web/src-build
