@@ -1,5 +1,5 @@
 // config all RequireJS modules
-requirejs.config({
+require.config({
 	waitSeconds: 0
 	, packages: [
 		{
@@ -45,7 +45,7 @@ requirejs.config({
 define([
 	'jquery'
 	, 'css!style/layout'
-	, 'css!style/themes/theme-default'
+	, 'css!style/themes/default'
 	, 'js/layout'
 ], function($) {
 	console.log($);

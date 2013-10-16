@@ -12,7 +12,7 @@
     <!-- <iframe style="display: none;" src="cache.html"></iframe> -->
 <script>
 var baseDir = 'assets';
-if(!location.search.match(/debug/)) baseDir = 'src';
+if(location.host.match(/(localhost|127\.0\.0\.1)/)) baseDir = 'src';
 var require = {
     baseUrl: baseDir,
     deps: ['js/main']

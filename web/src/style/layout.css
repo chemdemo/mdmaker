@@ -1,0 +1,9 @@
+@import url(../lib/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.css);
+
+@import url(../lib/jquery-layout/layout-default-latest.css);
+
+@import url(../bower-components/font-awesome/css/font-awesome.css);
+
+body {
+  background-color: #EEE;
+}
