@@ -1,9 +1,10 @@
 .git
 .DS_Store
 *.log
+.tmp
+.sass-cache
 /bin
 /logs
 /node_modules
-/tmp
 /web/src/bower-components
 /web/assets

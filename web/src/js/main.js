@@ -12,11 +12,6 @@ requirejs.config({
 			location: 'bower-components/require-css',
 			main: 'css'
 		}
-		, {
-			name: 'stylus',
-			location: 'bower-components/require-stylus',
-			main: 'stylus'
-		}
 	]
 	, paths: {
 		jquery: 'bower-components/jquery/jquery'
@@ -49,8 +44,8 @@ requirejs.config({
 // Application main
 define([
 	'jquery'
-	, 'stylus!style/layout'
-	, 'stylus!style/themes/theme-default'
+	, 'css!style/layout'
+	, 'css!style/themes/theme-default'
 	, 'js/layout'
 ], function($) {
 	console.log($);
