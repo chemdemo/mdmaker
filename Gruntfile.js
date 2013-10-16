@@ -26,16 +26,15 @@ module.exports = function(grunt) {
             },
             // styles: {
             //     files: ['<%= yeoman.src %>/style/{,*/}*.css'],
-            //     tasks: [/*'copy:styles', */'autoprefixer']
+            //     tasks: [/*'copy:styles', 'autoprefixer'*/]
             // },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    'Gruntfile.js',
                     'web/*.html',
-                    '<%= yeoman.src %>/style/{,*/}*.css',
+                    '<%= yeoman.src %>/style/{,*/}*.{scss,sass}',
                     '<%= yeoman.src %>/js/{,*/}*.js',
                     '<%= yeoman.src %>/style/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
@@ -82,7 +81,7 @@ module.exports = function(grunt) {
                     ]
                 }]
             },
-            server: ['<%= yeoman.src %>{,*/}*.css']
+            server: ['<%= yeoman.src %>/style/{,*/}*.css']
         },
         jshint: {
             options: {
@@ -105,7 +104,7 @@ module.exports = function(grunt) {
         },
         compass: {
             options: {
-                config: '<%= yeoman.pub %>/compass_config.rb',
+                //config: 'web/compass.rb',
                 //banner: '<%= pkg.description %>',
                 sassDir: '<%= yeoman.src %>/style',
                 cssDir: '<%= yeoman.src %>/style',
@@ -114,13 +113,17 @@ module.exports = function(grunt) {
                 // imagesDir: '<%= yeoman.src %>/images',
                 // javascriptsDir: '<%= yeoman.src %>/js',
                 // fontsDir: '<%= yeoman.src %>/style/fonts',
-                // importPath: '<%= yeoman.src %>/bower-components',
+                // importPath: [
+                //     'lib/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.css',
+                //     'lib/jquery-layout/layout-default-latest.css',
+                //     '<%= yeoman.src %>/bower-components'
+                // ],
                 // httpImagesPath: '/style/images',
                 // httpGeneratedImagesPath: '/style/images',
                 // httpFontsPath: '/styles/fonts',
                 outputStyle: 'compressed',
                 force: true,
-                //assetCacheBuster: false,
+                assetCacheBuster: false,
                 relativeAssets: false
             },
             server: {
@@ -160,7 +163,7 @@ module.exports = function(grunt) {
             manifest: {
                 files: {'<%=  yeoman.pub %>/res.manifest': '<%=  yeoman.pub %>/res.manifest'},
                 options: {
-                    replacements: [{
+                    replacements: [
                         {
                             pattern: /(#Date ).*/,
                             replacement: '$1<%= grunt.template.today() %>'
@@ -169,7 +172,7 @@ module.exports = function(grunt) {
                             pattern: /(#CacheStart\n)[\s\S]*(\n#CacheEnd)/,
                             replacement: '$1<%= cacheList %>$2'
                         }
-                    }]
+                    ]
                 }
             }
         },
@@ -277,7 +280,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('gen-list', function() {
+    grunt.registerTask('gen-cache-list', function() {
         var r = [];
         grunt.util.recurse(arguments, function(arsg) {
             grunt.log.writeln('List res: ' + arg);
@@ -286,6 +289,20 @@ module.exports = function(grunt) {
             });
         });
         grunt.config.set('cacheList', r.join('\n'));
+    });
+
+    // see : https://github.com/benweet/stackedit
+    grunt.registerTask('gen-cache', function() {
+        var pub = grunt.config.yeoman.pub;
+        var resFolderList = [
+            pub + '/assets',
+            pub + 'lib/MathJax/extensions',
+            pub + 'lib/MathJax/fonts/HTML-CSS/TeX/woff',
+            pub + 'lib/MathJax/jax/output/HTML-CSS/fonts/TeX',
+            pub + 'lib/MathJax/jax/output/HTML-CSS/fonts/STIX'
+        ];
+        grunt.task.run('gen-cache-list:' + resFolderList.join(':'));
+        grunt.task.run('str-replace:manifest');
     });
 
     grunt.registerTask('server', function (target) {

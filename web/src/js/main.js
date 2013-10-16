@@ -47,6 +47,6 @@ define([
 	, 'css!style/layout'
 	, 'css!style/themes/default'
 	, 'js/layout'
-], function($) {
-	console.log($);
+], function($, layoutStyle, themeStyle, layout) {
+	$(document).ready(layout.init);
 });
