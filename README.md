@@ -24,11 +24,3 @@
 
 9. 未完待列。。。
 
-*code test*
-
-``` javascript
-function foo() {
-  console.log(222);
-}
-```
----
