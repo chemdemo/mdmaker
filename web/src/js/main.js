@@ -3,19 +3,18 @@ require.config({
 	waitSeconds: 0
 	, packages: [
 		{
-			name: 'ace',
-			location: 'bower-components/ace/lib/ace',
-			main: 'ace'
+			name: 'ace'
+			, location: 'bower-components/ace/lib/ace'
+			, main: 'ace'
 		}
 		, {
-			name: 'css',
-			location: 'bower-components/require-css',
-			main: 'css'
+			name: 'css'
+			, location: 'bower-components/require-css'
+			, main: 'css'
 		}
 	]
 	, paths: {
 		jquery: 'bower-components/jquery/jquery'
-		//, requirejs: 'bower-components/requirejs/require'
 		, marked: 'bower-components/marked/lib/marked'
 		, underscore: 'bower-components/underscore/underscore'
 		, mousetrap: 'bower-components/mousetrap/mousetrap'
@@ -26,11 +25,11 @@ require.config({
 		, FileSaver: 'bower-components/FileSaver/FileSaver'
 		, stacktrace: 'bower-components/stacktrace/stacktrace'
 		, jqueryUI: 'lib/jquery-ui/js/jquery-ui-1.10.3.custom'
-		, jqueryLayout: 'lib/jquery-layout/jquery.layout-latest.min'
+		, jqueryLayout: 'lib/jquery-layout/jquery.layout-latest'
 	}
 	, shim: {
 		underscore: {
-			ecports: '_'
+			exports: '_'
 		}
 		, mousetrap: {
 			exports: 'mousetrap'

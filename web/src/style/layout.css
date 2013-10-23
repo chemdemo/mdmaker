@@ -2108,3 +2108,7 @@ a .icon-flip-vertical:before {
 body {
   background-color: #EEE;
 }
+
+.ui-layout {
+  height: 600px;
+}

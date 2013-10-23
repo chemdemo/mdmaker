@@ -159,7 +159,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        'str-replace': {
+        'string-replace': {
             manifest: {
                 files: {'<%=  yeoman.pub %>/res.manifest': '<%=  yeoman.pub %>/res.manifest'},
                 options: {
@@ -313,7 +313,7 @@ module.exports = function(grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            'autoprefixer',
+            //'autoprefixer',
             'connect:livereload',
             'watch'
         ]);

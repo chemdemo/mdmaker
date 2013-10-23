@@ -4,7 +4,8 @@ define([
 	, 'jqueryLayout'
 ], function($) {
 	var layoutConfig = {
-		closable:					    true	// pane can open & close
+		applyDefaultStyles: 			false
+		,	closable:					true	// pane can open & close
 		,	resizable:					true	// when open, pane can be resized 
 		,	slidable:					true	// when closed, pane can 'slide' open over other panes - closes on mouse-out
 		,	livePaneResizing:			true
@@ -33,8 +34,7 @@ define([
 	};
 	var $layout;
 	var bindEvents = function() {
-		$layout
-			.bindButton('#close-east', 'close', 'east');
+		$layout.bindButton('#close-east', 'close', 'east');
 	};
 
 	function init() {
@@ -42,5 +42,7 @@ define([
 		bindEvents();
 	};
 
-	return init;
+	return {
+		init: init
+	};
 });
