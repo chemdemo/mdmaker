@@ -1,8 +1,4 @@
-# Mdmaker
-
-**A lightweight markdown editer**  
-
-*Currently under development*
+## A lightweight markdown editer(developing)
 
 ### Features List
 
@@ -16,11 +12,10 @@
 
 5. 支持快速插入markdown常见的mark
 
-6. 打通github、dropbox等平台，直接编辑线上文档
+6. 打通github、dropbox、evernote等平台，直接编辑线上文档
 
-7. 支持导入md文档、导出md、html格式文档
+7. 支持导入md文档、导出md、html、pdf格式文档
 
 8. 简洁的UI，专注写作
 
 9. 未完待列。。。
-
